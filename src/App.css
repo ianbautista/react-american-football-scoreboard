@@ -33,7 +33,7 @@
 }
 
 .home {
-  background-color: #656565;
+  background-color: crimson;
 }
 
 .away {
@@ -106,7 +106,7 @@
 }
 
 .buttons {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -115,7 +115,13 @@
 .homeButtons__touchdown,
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
-.awayButtons__fieldGoal {
+.awayButtons__fieldGoal, .quarterbutton {
   margin: 1rem;
   border-radius: 4px;
+}
+
+
+.homeButtons, .awayButtons {
+  width: 190px;
+  text-align: center;
 }

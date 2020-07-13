@@ -23,6 +23,13 @@ function App() {
 		setAwayScore(awayScore + 3);
 	};
 
+	// adding quarter functionality
+
+	const [quarters, setQuarters] = useState(0);
+	const nextQuarter = () => {
+		setQuarters(quarters + 1);
+	};
+
 	return (
 		<div className="container">
 			<section className="scoreboard">
@@ -39,7 +46,7 @@ function App() {
 						<div className="away__score">{awayScore}</div>
 					</div>
 				</div>
-				<BottomRow />
+				<BottomRow quarters={quarters} />
 			</section>
 			<section className="buttons">
 				<div className="homeButtons">
@@ -49,6 +56,11 @@ function App() {
 					</button>
 					<button onClick={homeFieldGoal} className="homeButtons__fieldGoal">
 						Home Field Goal
+					</button>
+				</div>
+				<div className="quarterButtonDiv">
+					<button onClick={nextQuarter} className="quarterbutton">
+						Quarter
 					</button>
 				</div>
 				<div className="awayButtons">
